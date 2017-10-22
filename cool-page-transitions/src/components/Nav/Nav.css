@@ -1,0 +1,15 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.active {
+    background: #00ff00;
+}

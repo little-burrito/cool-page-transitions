@@ -1,0 +1,67 @@
+linkbox {
+    width: 180px;
+    height: 60px;
+    position: relative;
+    perspective: 1000px;
+}
+
+cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+plane {
+    position: absolute;
+    display: block;
+    background: rgba( 255, 200, 200, 0.75 );
+}
+
+.front, .back {
+    width: 180px;
+    height: 60px;
+}
+
+.left, .right {
+    width: 120px;
+    height: 60px;
+}
+
+.top, .bottom {
+    width: 180px;
+    height: 180px;
+}
+
+.front {
+    transform: rotateY( 0deg ) translateZ( 60px );
+}
+
+.back {
+    transform: rotateY( 180deg ) translateZ( 60px );
+}
+
+.left {
+    transform: rotateY( -90deg ) translateZ( 90px );
+}
+
+.right {
+    transform: rotateY( 90deg ) translateZ( 90px );
+}
+
+.top { 
+    transform: rotateX( 90deg ) translateZ( 30px );
+}
+
+.bottom {
+    transform: rotateX( -90deg ) translateZ( 30px );
+}
+
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+cube {
+    animation: spin 5s infinite linear;
+}
